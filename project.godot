@@ -1,0 +1,81 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "FState",
+"class": "Behaviour",
+"language": "GDScript",
+"path": "res://scripts/behaviours/behaviour.gd"
+}, {
+"base": "Entity",
+"class": "Creature",
+"language": "GDScript",
+"path": "res://scripts/creature.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Entity",
+"language": "GDScript",
+"path": "res://scripts/entity.gd"
+}, {
+"base": "Node2D",
+"class": "FState",
+"language": "GDScript",
+"path": "res://scripts/state_machine/state.gd"
+}, {
+"base": "Node",
+"class": "FiniteStateMachine",
+"language": "GDScript",
+"path": "res://scripts/state_machine/finite_state_machine.gd"
+}, {
+"base": "Node",
+"class": "IBrain",
+"language": "GDScript",
+"path": "res://scripts/brain_interface.gd"
+}, {
+"base": "Reference",
+"class": "Seek",
+"language": "GDScript",
+"path": "res://scripts/steering/seek.gd"
+}, {
+"base": "Reference",
+"class": "Steering",
+"language": "GDScript",
+"path": "res://scripts/steering/steering.gd"
+}, {
+"base": "Behaviour",
+"class": "SteeringBehaviour",
+"language": "GDScript",
+"path": "res://scripts/behaviours/steering_behaviour.gd"
+} ]
+_global_script_class_icons={
+"Behaviour": "",
+"Creature": "",
+"Entity": "",
+"FState": "",
+"FiniteStateMachine": "",
+"IBrain": "",
+"Seek": "",
+"Steering": "",
+"SteeringBehaviour": ""
+}
+
+[application]
+
+config/name="setu-ai"
+run/main_scene="res://scenes/gameplay.tscn"
+config/icon="res://assets/images/icon.png"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
